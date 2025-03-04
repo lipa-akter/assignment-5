@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>দুই ভাগে বিভক্ত লেআউট</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div class="grid grid-cols-4 gap-4 w-full h-screen p-6">
+        <!-- Left Section (¾ অংশ) -->
+        <div class="col-span-3 bg-white shadow-lg rounded-lg p-6">
+            <h2 class="text-2xl font-bold mb-4">কার্ড সেকশন</h2>
+            <div class="flex justify-center gap-6">
+                <!-- বাম পাশের ছোট কার্ড -->
+                <div class="bg-white shadow-md rounded-lg p-3 flex flex-col items-center w-32 h-28">
+                    <h2 class="text-sm font-semibold">ছোট কার্ড</h2>
+                    <p class="text-gray-600 text-xs text-center">এটি একটি ছোট কার্ড।</p>
+                </div>
+
+                <!-- মাঝখানের বড় কার্ড (width বড় করা হয়েছে) -->
+                <div class="bg-blue-500 text-white shadow-md rounded-lg p-6 flex flex-col items-center w-80 h-32">
+                    <h2 class="text-xl font-bold">বড় কার্ড</h2>
+                    <p class="text-white text-center">এটি মাঝখানের বড় কার্ড।</p>
+                </div>
+
+                <!-- ডান পাশের ছোট কার্ড -->
+                <div class="bg-white shadow-md rounded-lg p-3 flex flex-col items-center w-32 h-28">
+                    <h2 class="text-sm font-semibold">ছোট কার্ড</h2>
+                    <p class="text-gray-600 text-xs text-center">এটি আরেকটি ছোট কার্ড।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Section (¼ অংশ) -->
+        <div class="col-span-1 bg-gray-200 shadow-lg rounded-lg p-6 flex items-center justify-center">
+            <h2 class="text-xl font-bold text-gray-700">ডান পাশ</h2>
+        </div>
+    </div>
+</body>
+</html>
