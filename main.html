@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <!-- daisy ul link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sora:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- font awsame link -->
+    <script src="https://kit.fontawesome.com/286f4614a4.js" crossorigin="anonymous"></script>
+    <!-- Extarnal css link-->
+    <link rel="stylesheet" href="./style/style.css">
+     
+</head>
+<body class="poppins-medium bg-blue-50 ">
+    <!-- start header section -->
+    <header>
+       <nav class="mt-2 bg-white p-6">
+        <div class="navbar shadow-sm">
+            <div class="navbar-start">
+                <img src="./assets/logo.png" alt="">
+             
+              <a class=" text-xl ml-2 font-bold">DevBoard</a>
+            </div>
+          
+            <div class="navbar-end gap-4">
+               
+                <button class="btn bg-blue-500 text-white">Back to home</button>
+               
+               
+            </div>
+          </div>
+       </nav>
+    </header>
+    <!-- main section -->
+     <main class="p-6">
+        <div class="justify-center">
+           <h1 class="text-xl font-bold text-center">Blog</h1> 
+        </div>
+
+      <div>
+         <!-- question 1 -->
+         <div class="mt-6 bg-white p-4 rounded-lg">
+            <h1 class="text-sm font-bold mt-2">Question-1: What are the different ways to select an element in the DOM?</h1>
+            <p class="text-xs mt-6"> <span class="font-bold text-sm">Answer:</span>  DOM-এ একটি element নির্বাচন করার জন্য বেশ কয়েকটি পদ্ধতি রয়েছে। নিচে কিছু গুরুত্বপূর্ণ পদ্ধতি উল্লেখ করা হলো— <br> getElementById() – id, getElementsByClassName(), getElementsByTagName() </p>
+         </div>
+         <!-- question 2 -->
+         <div class="mt-6 bg-white p-4 rounded-lg">
+            <h1 class="text-sm font-bold mt-2">Question-1:What is the difference between innerHTML, innerText, and textContent ?</h1>
+            <p class="text-xs mt-6"> <span class="font-bold text-sm">Answer:</span> innerHTML
+               এটি একটি element-এর সম্পূর্ণ HTML কোড (ট্যাগ সহ) প্রদান করে বা সেট করতে পারে।  এ্বং innerText
+               এটি শুধুমাত্র দৃশ্যমান (visible) টেক্সট প্রদান করে বা সেট করতে পারে। textContent
+               এটি একটি element-এর সম্পূর্ণ টেক্সট (hidden বা visible) প্রদান করে বা সেট করতে পারে। </p>
+         </div>
+         <!-- question 3 -->
+         <div class="mt-6 bg-white p-4 rounded-lg">
+            <h1 class="text-sm font-bold mt-2">Question-3: What is event delegation in the DOM?</h1>
+            <p class="text-xs mt-6"> <span class="font-bold text-sm">Answer:</span> Event Delegation হল এমন একটি প্রযুক্তি যেখানে parent element-এর উপর event listener সেট করা হয়, যা তার child elements-এ সংঘটিত event গুলোকে হ্যান্ডেল করতে পারে। এটি event bubbling মেকানিজমের উপর ভিত্তি করে কাজ করে।
+
+            </p>
+         </div>
+         <!-- question 4 -->
+         <div class="mt-6 bg-white p-4 rounded-lg">
+            <h1 class="text-sm font-bold mt-2">Question-4: What are the different ways to select an element in the DOM?</h1>
+            <p class="text-xs mt-6"> <span class="font-bold text-sm">Answer:</span> Event Bubbling হল এমন একটি প্রক্রিয়া যেখানে একটি ইভেন্ট প্রথমে target element-এর পরে আবার  বাবল হয়ে উপরে উঠে আসে।</p>
+         </div>
+         <!-- question 5 -->
+         <div class="mt-6 bg-white p-4 rounded-lg">
+            <h1 class="text-sm font-bold mt-2">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+            <p class="text-xs mt-6"> <span class="font-bold text-sm">Answer:</span> জাভাস্ক্রিপ্ট ব্যবহার করে আমরা DOM-এ নতুন element তৈরি (Create) করতে পারি, বিদ্যমান element-এ যোগ (Add) করতে পারি এবং অপ্রয়োজনীয় element মুছে ফেলতে (Remove) পারি</p>
+         </div>
+      </div>
+     </main>
+ </body>
+ </html>
