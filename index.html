@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="./style/style.css">
      
 </head>
-<body class="poppins-medium  bg-blue-100">
+<body class="poppins-medium  bg-blue-50">
     <!-- start header section -->
     <header class="container mx-auto">
        <nav class="mt-2 p-6">
@@ -24,13 +24,13 @@
             <div class="navbar-start">
                 <img src="./assets/logo.png" alt="">
              
-              <a class=" text-xl ml-2 ">Dev <span class="font-bold">Board</span> </a>
+              <a class=" text-xl ml-2  ">Dev <span class="font-bold">Board</span> </a>
             </div>
           
             <div class="navbar-end gap-4">
                <div class="flex bg-blue-50 rounded-3xl gap-2 p-3">
                 <img src="./assets/checkbox.png" alt="">
-                <h1 class="text-xl font-bold">25</h1>
+                <h1 id="checkbox-count" class="text-xl font-bold">23</h1>
                </div>
                 <img id="background-color" class="bg-blue-50 p-2 rounded-full" src="./assets/theme-btn.png" alt="">
                  
@@ -44,24 +44,24 @@
       
       <!-- section 1 -->
       <section class="min-h-screen  flex items-center justify-center ">
-        <div class="grid grid-cols-4 gap-4 w-full h-screen px-6 ">
+        <div class="grid grid-cols-4 gap-4 w-full px-6 ">
           <!-- Left Section  -->
           <div class="col-span-3 bg-white rounded-lg ">
              
-              <div class="flex justify-center gap-6 mt-6">
+              <div class="flex justify-around gap-4 mt-6">
                   <!-- left- small-card -->
-                  <div class="bg-blue-50 shadow-md rounded-lg p-3 flex flex-col items-center w-40 h-24">
+                  <div class=" bg-blue-50 shadow-md rounded-lg p-3 flex flex-col items-center w-40 h-24">
                      <div class="flex flex-row items-center gap-2 mt-4">
                       <img class="w-6 h-6" src="./assets/checkbox.png" alt="">
                       <div>
                         <h2 class="font-size ">Task Assigned </h2>
-                        <p class="text-bold text-sm text-start">05</p>
+                        <p id="task-assigned" class="text-bold text-sm text-start">06</p>
                       </div>
                      </div>
                   </div>
   
                   <!-- center big card  -->
-                  <div class="bg-gradient-to-r from-blue-500 to-indigo-300 rounded-lg p-3 flex flex-col items-center w-72 h-24">
+                  <div id="run-next-page" class="bg-gradient-to-r from-blue-500 to-indigo-300 rounded-lg p-3 flex flex-col items-center w-72 h-24">
                     <div class="flex flex-row items-center gap-2 mt-2">
                      <img class="w-14 h-14" src="./assets/board.png" alt="">
                      <div>
@@ -76,8 +76,9 @@
                     <div class="flex flex-row items-center gap-2 mt-4">
                      <img class="w-6 h-6" src="./assets/calender.png" alt="">
                      <div>
-                       <h2 class="font-size ">Task Assigned </h2>
-                       <p class="text-bold text-sm text-start">05</p>
+                      
+                       <p id="date" class="text-bold text-sm text-start"></p>
+
                      </div>
                     </div>
                  </div>
@@ -92,12 +93,12 @@
                         <p class="font-size ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
                           and ensure onClick works properly</p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="justify-between flex flex-row gap-6 mt-8 ">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
                     <!-- card-2 -->
@@ -107,12 +108,12 @@
                       <div class="bg-white p-2 mt-6 rounded-sm">
                         <p class="font-size ">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect. </p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="justify-between flex flex-row gap-6 mt-8 ">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
                     <!-- card-3 -->
@@ -122,12 +123,12 @@
                       <div class="bg-white p-2 mt-6 rounded-sm">
                         <p class="font-size ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="flex justify-between flex-row gap-6 mt-8">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
                     <!-- card-4 -->
@@ -137,12 +138,12 @@
                       <div class="bg-white p-2 mt-6 rounded-sm">
                         <Debug class="font-size ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="justify-between flex flex-row gap-6 mt-8 ">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
                     <!-- card-5 -->
@@ -152,12 +153,12 @@
                       <div class="bg-white p-2 mt-6 rounded-sm">
                         <p class="font-size ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="justify-between flex flex-row gap-6 mt-8 ">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
                     <!-- card-6 -->
@@ -167,15 +168,15 @@
                       <div class="bg-white p-2 mt-6 rounded-sm">
                         <p class="font-size ">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
                       </div>
-                      <div class="flex flex-row gap-6 mt-8 ">
+                      <div class="justify-between flex flex-row gap-6 mt-8 ">
                         <div>
                           <p class="font-size">Deadline</p>
                           <h1 class="text-xs ">21 March 2025</h1>
                         </div>
-                        <button class="btn bg-blue-500 text-white text-xs">Completed</button>
+                        <button  class="complete-btn btn bg-blue-500 text-white text-xs" onclick="completeTask(this)">Completed</button>
                       </div>
                     </div>
-                    <!-- card-2 -->
+                   
                 </div>
 
           </div>
@@ -183,12 +184,15 @@
              
          
           <!-- Right Section-->
-          <div class="col-span-1 bg-gray-100 shadow-lg rounded-lg p-6  ">
+          <div class="col-span-1 justify-items-center bg-white shadow-lg rounded-lg p-6  ">
              <div class="flex gap-2 items-center justify-center">
               <img src="./assets/activity.png" alt="">
               <h2 class="font-size">Activity Log</h2>
              </div>
-             <button class="btn bg-blue-500 text-white mt-4 ml-8">Clear History</button>
+             <button id="clear-hitory" class="btn bg-blue-500 text-white mt-4 ml-8 " onclick="clearHistory()" >Clear History</button>
+             <div id="history" class="mt-2 text-gray-700"></div>
+                   
+            </div>
       </div>
       </section>
     
@@ -198,6 +202,7 @@
      <footer>
 
      </footer>
-     <script src="./script/script.js"></script>
+      <script src="./script/script.js"></script>  
+
 </body>
 </html>
