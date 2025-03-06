@@ -3,7 +3,7 @@
   const backgroundColorImg = document.getElementById("background-color");
 
 
-const colors = [ "#ffebcd", "#f0f8ff", "#faebd7", "#ffcccb", "#e6e6fa"]; // You can add more 
+const colors = [ "#ffebcd", "#f0f8ff", "#faebd7", "#ffcccb", "#e6e6fa"]; 
 let colorIndex = 0;
 
 
@@ -36,13 +36,13 @@ document.addEventListener("DOMContentLoaded", function () {
     let completedTasks = parseInt(checkboxCount.textContent);
     let completedButtonCount = 0;
 
-    // Using a for loop instead of forEach
+  
     for (let i = 0; i < completeButtons.length; i++) {
         const button = completeButtons[i];
         button.addEventListener("click", function () {
             if (button.disabled) return; 
 
-            // Disable the button 
+            // Disable  button 
             button.disabled = true;
             button.classList.add("opacity-50", "cursor-not-allowed");
 
@@ -65,10 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // windows Alert  successful
             alert("Board update successful!");
 
-            //  completed button 
+        
             completedButtonCount++;
 
-            //  all tasks are completed alert, 
+            //  all tasks completed alert, 
             if (completedButtonCount === completeButtons.length) {
                 setTimeout(() => {
                     alert("All tasks completed successfully!");
@@ -95,9 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Reset completed button 
         completedButtonCount = 0;
 
-
-
-        
 
           
    
